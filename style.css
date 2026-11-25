@@ -109,17 +109,14 @@ h1{font-family:"Urbanist","Poppins",sans-serif;margin:6px 0 18px;font-size:clamp
 .card.project{grid-column:span 2}
 .card.project.big{grid-column:span 3}
 .card.project.big .thumb{height:300px}
-.card.project.big .thumb.img img{height:300px}
 .card.project.featured{grid-column:span 6;display:grid;grid-template-columns:1fr 1.35fr;align-items:stretch}
 .card.project.featured .thumb{order:2;height:100%;min-height:440px}
-.card.project.featured .thumb.img img{height:100%;min-height:440px}
 .card.project.featured .feat-body{padding:44px 40px;display:flex;flex-direction:column;justify-content:center}
 .card.project.featured .feat-body>*{padding-left:0!important;padding-right:0!important}
 .card.project.featured h3{font-size:2rem;padding-top:14px}
 .card.project.featured .feat-cta{display:inline-block;margin-top:22px;font-weight:600;color:var(--orange)}
 .card.project:nth-child(7){grid-column:span 6;display:grid;grid-template-columns:360px 1fr;align-items:stretch}
 .card.project:nth-child(7) .thumb{height:100%;min-height:200px}
-.card.project:nth-child(7) .thumb.img img{height:100%;min-height:200px}
 .card.project:nth-child(7) h3,.card.project:nth-child(7) p,.card.project:nth-child(7) .tags{padding-left:28px!important}
 .card{display:block;background:var(--tile);border:1px solid var(--line);border-radius:22px;color:var(--ink);
   overflow:hidden;transition:transform .28s ease,box-shadow .28s ease}
@@ -133,10 +130,10 @@ h1{font-family:"Urbanist","Poppins",sans-serif;margin:6px 0 18px;font-size:clamp
 .card.project .domain{padding-top:0;padding-bottom:8px;margin:0;color:var(--orange);font-size:.82rem;font-weight:500}
 .thumb{height:190px;display:grid;place-items:center;overflow:hidden}
 .thumb span{font-size:1.9rem;font-weight:800;color:#fff;letter-spacing:.02em;font-family:"Urbanist","Poppins",sans-serif}
-.thumb.img{display:block}
-.thumb.img img{width:100%;height:190px;object-fit:cover;object-position:top;display:block;
-  transform:translateY(var(--py,0)) scale(1.12);transition:transform .12s linear;will-change:transform}
-.card.project:hover .thumb.img img{transform:translateY(var(--py,0)) scale(1.18)}
+.thumb.img{display:block;position:relative;overflow:hidden}
+.thumb.img img{position:absolute;left:0;top:-16px;width:100%;height:calc(100% + 32px);object-fit:cover;object-position:center top;display:block;
+  transform:translateY(var(--py,0));transition:transform .3s ease;will-change:transform}
+.card.project:hover .thumb.img img{transform:translateY(var(--py,0)) scale(1.05)}
 .thumb.ev{background:linear-gradient(135deg,#7c3aed,#c4b5fd)}
 .thumb.gs{background:linear-gradient(135deg,#0e7490,#67e8f9)}
 .thumb.co{background:linear-gradient(135deg,#166534,#86efac)}
@@ -207,7 +204,6 @@ section h2.in::after{transform:scaleX(1)}
   .card.project,.card.project.big{grid-column:span 6}
   .card.project.featured{grid-template-columns:1fr}
   .card.project.featured .thumb{order:0;min-height:280px}
-  .card.project.featured .thumb.img img{min-height:280px}
   .card.project:nth-child(7){grid-template-columns:1fr}
   .card.project:nth-child(7) .thumb{min-height:200px}
   .hero{grid-template-columns:1fr;text-align:center;padding-top:120px}
