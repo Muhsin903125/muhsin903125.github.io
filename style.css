@@ -56,7 +56,8 @@ h1{font-family:"Urbanist","Poppins",sans-serif;margin:6px 0 18px;font-size:clamp
 .hv-2{width:62%;height:52%;bottom:0;left:0;transform:translateY(var(--py2,0)) rotate(-3deg);box-shadow:0 30px 70px rgba(20,12,2,.28)}
 .hv-face{position:absolute;top:-14px;left:2%;width:132px;height:132px;border-radius:50%;object-fit:cover;
   border:7px solid #fff;box-shadow:0 16px 40px rgba(20,12,2,.22)}
-.stats div{background:var(--tile);border:1px solid var(--line);border-radius:16px;padding:14px 10px;text-align:center}
+.stats div{background:var(--tile);border:1px solid var(--line);border-radius:16px;padding:14px 10px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:88px}
 .stats b{display:block;font-size:1.4rem;color:var(--orange);font-family:"Urbanist","Poppins",sans-serif}
 .stats span{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .hero-photo{text-align:center}
@@ -69,7 +70,7 @@ h1{font-family:"Urbanist","Poppins",sans-serif;margin:6px 0 18px;font-size:clamp
 .socials svg{width:20px;height:20px;fill:#fff}
 
 /* ---------- about ---------- */
-.about-wrap{display:flex;gap:56px;align-items:center;max-width:1120px;margin:36px auto 0}
+.about-wrap{display:flex;gap:56px;align-items:center;max-width:1120px;margin:36px 0 0}
 .about-img{width:280px;height:340px;object-fit:cover;border-radius:28px;flex:none;
   border:8px solid #fff;box-shadow:0 22px 50px rgba(20,12,2,.16)}
 .about-text{color:var(--muted)}
@@ -77,8 +78,8 @@ h1{font-family:"Urbanist","Poppins",sans-serif;margin:6px 0 18px;font-size:clamp
 .about-text p:first-child{font-size:1.35rem;line-height:1.5;color:var(--ink);font-weight:500}
 
 /* ---------- experience timeline ---------- */
-.timeline{max-width:1080px;margin:44px auto 0}
-.job{position:relative;display:grid;grid-template-columns:230px 1fr;gap:8px 48px;padding:26px 0;border-top:1px solid var(--line);
+.timeline{max-width:1080px;margin:44px 0 0}
+.job{position:relative;display:grid;grid-template-columns:250px 1fr;gap:8px 48px;padding:26px 0;border-top:1px solid var(--line);
   transition:background .22s ease}
 .job:hover{background:rgba(255,255,255,.55)}
 .job h3{grid-column:2;grid-row:1}
@@ -91,10 +92,10 @@ h1{font-family:"Urbanist","Poppins",sans-serif;margin:6px 0 18px;font-size:clamp
 .job .meta{margin:0 0 10px;color:var(--orange);font-size:.88rem;font-weight:500}
 .job ul{padding-left:18px;list-style:disc;color:var(--muted)}
 .job li{margin-bottom:4px}
-.note{max-width:1080px;margin:22px auto 0;color:var(--muted);font-size:.9rem}
+.note{max-width:1080px;margin:22px 0 0;color:var(--muted);font-size:.9rem}
 
 /* ---------- skills chips ---------- */
-.skill-group{max-width:1140px;margin:0 auto 30px}
+.skill-group{max-width:1140px;margin:0 0 30px}
 .sg-title{margin:0 0 12px;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--orange)}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
@@ -111,7 +112,7 @@ h1{font-family:"Urbanist","Poppins",sans-serif;margin:6px 0 18px;font-size:clamp
 .card.project.big .thumb{height:300px}
 .card.project.featured{grid-column:span 6;display:grid;grid-template-columns:1fr 1.35fr;align-items:stretch}
 .card.project.featured .thumb{order:2;height:100%;min-height:440px}
-.card.project.featured .feat-body{padding:44px 40px;display:flex;flex-direction:column;justify-content:center}
+.card.project.featured .feat-body{padding:48px 44px;display:flex;flex-direction:column;justify-content:center}
 .card.project.featured .feat-body>*{padding-left:0!important;padding-right:0!important}
 .card.project.featured h3{font-size:2rem;padding-top:14px}
 .card.project.featured .feat-cta{display:inline-block;margin-top:22px;font-weight:600;color:var(--orange)}
@@ -140,7 +141,7 @@ h1{font-family:"Urbanist","Poppins",sans-serif;margin:6px 0 18px;font-size:clamp
 .tags{display:block;padding-top:16px;color:var(--orange);font-size:.8rem;font-weight:500}
 
 /* ---------- contact (dark panel) ---------- */
-#contact{background:var(--bar);border:1px solid #26262e;border-radius:34px;padding:88px 6vw;margin:40px auto 110px;text-align:center;
+#contact{background:var(--bar);border:1px solid #26262e;border-radius:34px;padding:88px 6vw;margin:0 auto 110px;text-align:center;
   box-shadow:0 20px 60px rgba(15,12,20,.3)}
 #contact h2{text-align:center}
 #contact h2::after{margin-left:auto;margin-right:auto}
