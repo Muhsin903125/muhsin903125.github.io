@@ -8,9 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Urbanist:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="scrollbar"></div>
 
 <nav>
   <a class="logo" href="#top">Muhsin<span>.</span></a>
@@ -268,9 +272,7 @@
 </section>
 
 <footer>
-  <div class="foot-main">
-    <p class="wordmark">MUHSIN</p>
-    <ul class="foot-links">
+  <ul class="foot-links">
       <li><a href="#top">Home</a></li>
       <li><a href="#about">About Me</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -283,13 +285,64 @@
       <a href="https://www.linkedin.com/in/muhsinmuhammedali" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
       <a href="mailto:muhsin903125@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
     </div>
-  </div>
-  <div class="foot-bar">&copy; 2026 Muhsin Muhammedali &middot; Dubai, UAE</div>
+  <p class="copy">&copy; 2026 Muhsin Muhammedali &middot; Dubai, UAE</p>
 </footer>
 
 <script>
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
-document.querySelectorAll('.job,.card,.skill-group,.about-wrap,.contact-btns').forEach(function(el){el.classList.add('reveal');io.observe(el)});
+document.querySelectorAll('.card,.skill-group,.about-wrap,.contact-btns').forEach(function(el){el.classList.add('reveal');io.observe(el)});
+document.querySelectorAll('.job').forEach(function(el){el.classList.add('reveal-l');io.observe(el)});
+document.querySelectorAll('section h2').forEach(function(el){io.observe(el)});
+/* stagger chips and cards */
+document.querySelectorAll('.chips').forEach(function(g){
+  Array.prototype.forEach.call(g.children,function(c,i){c.classList.add('reveal');c.style.transitionDelay=(i*35)+'ms';io.observe(c)});
+});
+document.querySelectorAll('.cards').forEach(function(g){
+  Array.prototype.forEach.call(g.children,function(c,i){c.style.transitionDelay=(i*80)+'ms'});
+});
+document.querySelectorAll('.timeline').forEach(function(g){
+  Array.prototype.forEach.call(g.children,function(c,i){if(c.classList.contains('job'))c.style.transitionDelay=(i*60)+'ms'});
+});
+/* scroll progress + nav shadow */
+var bar=document.getElementById('scrollbar'),nav=document.querySelector('nav');
+function onScroll(){
+  var h=document.documentElement, p=h.scrollTop/(h.scrollHeight-h.clientHeight);
+  bar.style.width=(p*100)+'%';
+  nav.classList.toggle('scrolled',h.scrollTop>10);
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+/* parallax: hero photo + project thumbs */
+var parEls=[];
+if(!reduce){
+  var heroPh=document.querySelector('.hero-photo');
+  if(heroPh)parEls.push({el:heroPh,kind:'hero'});
+  document.querySelectorAll('.thumb.img').forEach(function(t){parEls.push({el:t,kind:'thumb'})});
+  var ticking=false;
+  function parallax(){
+    var vh=window.innerHeight,sc=window.scrollY;
+    parEls.forEach(function(o){
+      if(o.kind==='hero'){o.el.style.transform='translateY('+(sc*0.07).toFixed(1)+'px)';return}
+      var r=o.el.getBoundingClientRect();
+      var off=(r.top+r.height/2-vh/2)/vh; /* -1..1 around center */
+      o.el.style.setProperty('--py',(off*-26).toFixed(1)+'px');
+    });
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(parallax)}},{passive:true});
+  window.addEventListener('resize',parallax);parallax();
+}
+/* count-up stats */
+if(!reduce){
+  document.querySelectorAll('.stats b').forEach(function(b){
+    var t=b.textContent.trim(),n=parseInt(t,10);if(isNaN(n))return;
+    var suf=t.replace(/[0-9]/g,''),start=null;
+    function tick(ts){if(!start)start=ts;var k=Math.min((ts-start)/1100,1);
+      b.textContent=Math.round(n*(1-Math.pow(1-k,3)))+(k===1?suf:'');
+      if(k<1)requestAnimationFrame(tick);}
+    requestAnimationFrame(tick);
+  });
+}
 </script>
 </body>
 </html>
