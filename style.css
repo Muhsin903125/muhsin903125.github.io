@@ -8,7 +8,7 @@
   --bar:#15151d;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;font-family:"Poppins",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
 a{text-decoration:none;color:inherit}
 ul{margin:0;padding:0;list-style:none}
@@ -24,18 +24,18 @@ ul{margin:0;padding:0;list-style:none}
 /* ---------- nav ---------- */
 nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;
   gap:16px;padding:16px 7vw;background:#fff;box-shadow:0 1px 0 var(--line)}
-.logo{font-size:1.5rem;font-weight:700}
+.logo{font-family:"Urbanist","Poppins",sans-serif;font-size:1.5rem;font-weight:700}
 .logo span{color:var(--orange)}
 .nav-links{display:flex;gap:34px}
 .nav-links a{font-size:.95rem;font-weight:500;color:var(--ink)}
 .nav-links a:hover{color:var(--orange)}
 
 /* ---------- hero ---------- */
-.hero{max-width:1200px;margin:0 auto;padding:72px 7vw 40px;display:grid;
+.hero{background:radial-gradient(58% 52% at 72% 18%,#fff2e5 0%,rgba(255,255,255,0) 72%);max-width:1200px;margin:0 auto;padding:72px 7vw 40px;display:grid;
   grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 .hi{margin:0;font-size:1.05rem;font-weight:500}
 .name{margin:2px 0 0;font-size:1.7rem;font-weight:600;color:var(--orange)}
-h1{margin:6px 0 18px;font-size:clamp(2.6rem,5.6vw,4.3rem);font-weight:800;line-height:1.06;color:var(--ink)}
+h1{font-family:"Urbanist","Poppins",sans-serif;margin:6px 0 18px;font-size:clamp(2.6rem,5.6vw,4.3rem);font-weight:800;line-height:1.06;color:var(--ink)}
 .lead{max-width:520px;color:var(--muted);margin:0 0 26px}
 .hero .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px;max-width:520px}
 .stats div{background:var(--card);border-radius:10px;padding:14px 10px;text-align:center}
@@ -52,7 +52,7 @@ h1{margin:6px 0 18px;font-size:clamp(2.6rem,5.6vw,4.3rem);font-weight:800;line-h
 
 /* ---------- sections ---------- */
 section{max-width:1200px;margin:0 auto;padding:64px 7vw}
-section h2{text-align:center;font-size:2rem;font-weight:700;margin:0 0 14px}
+section h2{font-family:"Urbanist","Poppins",sans-serif;text-align:center;font-size:2rem;font-weight:700;margin:0 0 14px}
 section h2::after{content:"";display:block;width:64px;height:4px;border-radius:2px;background:var(--orange);margin:10px auto 0}
 .sub{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 36px}
 .about-text{max-width:760px;margin:26px auto 0;color:var(--muted)}
@@ -98,12 +98,49 @@ section h2::after{content:"";display:block;width:64px;height:4px;border-radius:2
 /* ---------- footer ---------- */
 footer{margin-top:40px}
 .foot-main{background:var(--card);text-align:center;padding:48px 7vw 36px}
-.wordmark{margin:0 0 18px;font-size:2.6rem;font-weight:800;letter-spacing:.12em;color:#d9d9d9}
+.wordmark{font-family:"Urbanist","Poppins",sans-serif;margin:0 0 18px;font-size:2.6rem;font-weight:800;letter-spacing:.12em;color:#d9d9d9}
 .foot-links{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-bottom:20px}
 .foot-links a{font-size:.92rem;color:var(--muted)}
 .foot-links a:hover{color:var(--orange)}
 .foot-main .socials{margin-top:0}
 .foot-bar{background:var(--bar);color:#bdbdbd;text-align:center;font-size:.85rem;padding:14px 7vw}
+
+
+/* ---------- skills logo chips ---------- */
+.skill-group{max-width:980px;margin:0 auto 30px}
+.sg-title{margin:0 0 12px;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--orange)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);
+  border-radius:999px;padding:8px 16px;font-size:.88rem;font-weight:500;color:var(--ink);transition:border-color .2s,transform .2s}
+.chip:hover{border-color:var(--orange);transform:translateY(-2px)}
+.chip svg{width:18px;height:18px;flex:none}
+.chip.muted{color:var(--muted);font-weight:400}
+
+/* ---------- about photo ---------- */
+.about-wrap{display:flex;gap:40px;align-items:center;max-width:960px;margin:26px auto 0}
+.about-img{width:220px;height:220px;object-fit:cover;border-radius:18px;flex:none;
+  border:5px solid var(--card);box-shadow:0 14px 34px rgba(0,0,0,.12)}
+.about-wrap .about-text{margin:0}
+
+/* ---------- projects ---------- */
+.thumb.img{display:block}
+.thumb.img img{width:100%;height:170px;object-fit:cover;object-position:top;display:block}
+.thumb.ev{background:linear-gradient(135deg,#7c3aed,#c4b5fd)}
+.thumb.gs{background:linear-gradient(135deg,#0e7490,#67e8f9)}
+.card.project .domain{padding:0 22px;margin:2px 0 8px;color:var(--orange);font-size:.82rem;font-weight:500}
+
+/* ---------- contact ---------- */
+.location{text-align:center;margin:-18px auto 30px;color:var(--muted);font-size:.95rem;font-weight:500}
+.location::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;
+  background:var(--orange);margin-right:8px}
+.btn.whatsapp{display:inline-flex;align-items:center;gap:10px;background:#25d366}
+.btn.whatsapp:hover{background:#1eb856}
+.btn.whatsapp svg{width:18px;height:18px;fill:#fff}
+
+@media(max-width:720px){
+  .about-wrap{flex-direction:column;text-align:center;gap:22px}
+  .about-img{width:170px;height:170px}
+}
 
 /* ---------- responsive ---------- */
 @media(max-width:980px){
@@ -126,4 +163,21 @@ footer{margin-top:40px}
   .job::before{left:-23px}
   .job.current::after{position:static;display:inline-block;margin-top:8px}
   h1{font-size:2.4rem}
+}
+.thumb.co{background:linear-gradient(135deg,#166534,#86efac)}
+
+/* ---------- rapport-inspired motion & expansion ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+.card{border-radius:18px}
+.card.project{transition:transform .28s ease,box-shadow .28s ease}
+.card.project:hover{transform:scale(1.025);box-shadow:0 22px 46px rgba(0,0,0,.13)}
+.thumb.img img{transition:transform .45s ease}
+.card.project:hover .thumb.img img{transform:scale(1.07)}
+.job{transition:transform .22s ease,box-shadow .22s ease}
+.job:hover{transform:translateX(5px);box-shadow:0 10px 26px rgba(0,0,0,.08)}
+.job.current:hover{border-color:var(--orange-dark)}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
 }
