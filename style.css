@@ -709,3 +709,25 @@ html.modal-open{overflow:hidden}
 .svc b::before{content:"\2713";color:var(--accent-text);margin-right:8px}
 .svc span{font-size:13px;color:var(--muted)}
 @media (max-width:600px){.svc{grid-template-columns:1fr}}
+
+/* compact product preview cards */
+.hs-track{gap:14px}
+.hs-track>.proj{flex:0 0 min(290px,74vw);width:min(290px,74vw);min-width:0;padding:10px;border-radius:16px}
+.proj .browser{border-radius:10px}
+.proj .win-bar{padding:6px 10px;gap:5px}
+.proj .win-bar i{width:7px;height:7px}
+.proj .win-bar span{font-size:10px;margin-left:6px}
+.proj .shot{aspect-ratio:16/9}
+.ph b{font-size:20px}
+.ph span{font-size:10.5px}
+.site-stack{gap:4px}
+.site-stack li{padding:3px 8px;font-size:10.5px;gap:8px}
+.site-stack i{width:16px;height:16px;font-size:9px;border-radius:4px}
+.proj-body{padding:12px 6px 4px}
+.proj-body .bx-k{font-size:10.5px;margin-bottom:6px}
+.proj-body h3{font-size:16.5px;line-height:1.25}
+.proj-body>p:not(.bx-k){margin-top:6px;font-size:13.5px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.proj-body .pills.sm{margin-top:10px;gap:5px;flex-wrap:nowrap;overflow:hidden}
+.proj-body .pills.sm span{font-size:10.5px;padding:3px 8px;white-space:nowrap}
+.proj-body .suite-tags{display:none}
+.proj-body .go{padding-top:10px;font-size:12px}
