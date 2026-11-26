@@ -690,3 +690,7 @@ html.modal-open{overflow:hidden}
 .sl-main small,.sl-main b{overflow-wrap:anywhere}
 .m-body{overflow-x:hidden}
 @media (max-width:600px){.site-list li{flex-direction:column;gap:6px}.sl-code{align-self:flex-start;padding:7px 14px;border-radius:999px}.sl-main{padding:12px 14px;gap:12px}}
+
+/* education as its own section */
+#education .edu{margin-top:0}
+.edu b{margin-top:0}

@@ -27,11 +27,12 @@
 <nav class="nav">
   <a class="logo" href="#top" aria-label="Home">M<span>.</span></a>
   <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Stack</a></li>
     <li><a href="#work">Projects</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
   </ul>
   <div class="nav-end">
     <button class="theme-btn" id="themeBtn" aria-label="Toggle light and dark theme">
@@ -88,13 +89,153 @@
 </div>
 
 <main>
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <div class="sec-head">
+    <p class="kick"><span>01</span> About</p>
+  </div>
+  <div class="about">
+    <div class="about-body">
+      <p class="about-big" data-words data-par="-0.05">I started as a .NET developer. Today I also own architecture, roadmaps and sprint delivery for the platforms I build.</p>
+      <p>Most of my 8+ years went into C# and ASP.NET Web API services, SQL Server and Oracle databases, and the React apps on top of them. My current role adds architecture decisions, MVP scoping and running sprints as scrum master. I also build my own SaaS projects. My day-to-day workflow is agentic: I plan, code, review and test with AI agents such as Claude and Codex, which lets small teams ship fast without cutting corners.</p>
+      <div class="pillars" data-par="0.04">
+        <div><span>01</span><h4>Architecture</h4><p>Data models, access control, SSO and secure authentication.</p></div>
+        <div><span>02</span><h4>Product</h4><p>Roadmaps, scoping, user stories and change requests.</p></div>
+        <div><span>03</span><h4>Leadership</h4><p>Leading projects, running scrum, and mentoring and training new interns.</p></div>
+        <div><span>04</span><h4>AI-first delivery</h4><p>Agentic AI workflows for fast, efficient project delivery.</p></div>
+      </div>
+      <p class="also"><b>Also:</b> a Supabase learning guide for interns, research on UAE payment gateways (Stripe fees, FX strategy), Azure AD / MSAL troubleshooting and API specs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section split">
+  <div class="sec-head row">
+    <span class="sec-prog" aria-hidden="true"><i></i></span>
+    <p class="kick"><span>02</span> Since 2018</p>
+    <h2 data-par="-0.04">Experience</h2>
+  </div>
+  <div class="xp-wrap"><span class="xp-rail" aria-hidden="true"><i></i></span>
+  <ol class="xp">
+    <li class="now">
+      <span class="xp-when">Oct 2024 &mdash; Now</span>
+      <div class="xp-what"><h3>Full Stack Developer</h3><p>Lead full stack development on enterprise insurance platforms (React, ASP.NET/.NET, SQL Server, Oracle). I lead projects end to end, own architecture and roadmaps, run sprints as scrum master, and mentor and train new interns.</p></div>
+      <span class="xp-where">Dev Dynamics &middot; Dubai</span>
+    </li>
+    <li>
+      <span class="xp-when">Nov 2022 &mdash; Oct 2024</span>
+      <div class="xp-what"><h3>.NET API Developer</h3><p>Built and maintained .NET REST APIs and React front ends for business applications in an agile team.</p></div>
+      <span class="xp-where">Dev Dynamics &middot; Dubai</span>
+    </li>
+    <li>
+      <span class="xp-when">Jun 2021 &mdash; Sep 2022</span>
+      <div class="xp-what"><h3>Programmer Analyst</h3><p>Built .NET APIs and web applications on SQL Server, plus web design work.</p></div>
+      <span class="xp-where">Cognizant &middot; Kochi</span>
+    </li>
+    <li>
+      <span class="xp-when">Jun 2020 &mdash; Jun 2021</span>
+      <div class="xp-what"><h3>Software Developer</h3><p>Built web apps with .NET Core, ASP.NET Web API, HTML and React.js.</p></div>
+      <span class="xp-where">Intertoons &middot; Kochi</span>
+    </li>
+    <li>
+      <span class="xp-when">Apr 2019 &mdash; Jun 2020</span>
+      <div class="xp-what"><h3>Software Developer</h3><p>Built .NET APIs, WCF services and React.js interfaces.</p></div>
+      <span class="xp-where">Techxora &middot; Thrissur</span>
+    </li>
+    <li>
+      <span class="xp-when">Nov 2018 &mdash; Apr 2019</span>
+      <div class="xp-what"><h3>Software Designer</h3><p>Interface and web design.</p></div>
+      <span class="xp-where">Intellect Technomedia</span>
+    </li>
+  </ol></div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="work" class="section">
+  <div class="sec-head row">
+    <p class="kick"><span>03</span> Handled projects</p>
+    <h2 data-par="-0.04">Projects</h2>
+  </div>
+  <div class="pfilter" role="tablist" aria-label="Filter projects">
+    <button class="pf on" data-filter="all" role="tab" aria-selected="true">All <i>9</i></button>
+    <button class="pf" data-filter="enterprise" role="tab" aria-selected="false">Enterprise <i>7</i></button>
+    <button class="pf" data-filter="self" role="tab" aria-selected="false">Self projects <i>2</i></button>
+  </div>
+  <div class="pgrid">
+    <article class="pcard" data-group="enterprise" data-modal="bi" tabindex="0" role="button" data-cursor="View">
+      <div class="pc-top"><span class="pc-n">01</span><span class="pc-badge">Case study</span></div>
+      <p class="pc-cat">Enterprise &middot; Business Intelligence</p>
+      <h3>Executive BI &amp; AI Insights Platform</h3>
+      <p class="pc-desc">Leadership dashboards for loss ratios, P&amp;L forecasting and scorecards, powered by in-house AI.</p>
+      <div class="pc-foot"><span class="pc-tags">Azure AD &middot; Self-hosted LLM &middot; Scrum</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
+    </article>
+    <article class="pcard" data-group="enterprise" data-modal="dms" tabindex="0" role="button" data-cursor="View">
+      <div class="pc-top"><span class="pc-n">02</span><span class="pc-badge">Case study</span></div>
+      <p class="pc-cat">Enterprise &middot; Document Management</p>
+      <h3>Technical Document Repository</h3>
+      <p class="pc-desc">Dynamic vaults, Drive-style sharing and approval workflows for treaties, wordings and rate sheets.</p>
+      <div class="pc-foot"><span class="pc-tags">Next.js &middot; Supabase &middot; Drizzle</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
+    </article>
+    <article class="pcard" data-group="enterprise" data-modal="crm" tabindex="0" role="button" data-cursor="View">
+      <div class="pc-top"><span class="pc-n">03</span><span class="pc-badge">Case study</span></div>
+      <p class="pc-cat">Enterprise &middot; CRM</p>
+      <h3>CRM Access Control &amp; Leads</h3>
+      <p class="pc-desc">Azure AD-synced role-based access, a leads workspace for agents and a 12-widget KPI dashboard.</p>
+      <div class="pc-foot"><span class="pc-tags">ASP.NET &middot; React &middot; RBAC</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
+    </article>
+    <article class="pcard" data-group="enterprise" data-modal="mob" tabindex="0" role="button" data-cursor="View">
+      <div class="pc-top"><span class="pc-n">04</span></div>
+      <p class="pc-cat">Enterprise &middot; Mobile</p>
+      <h3>Insurance Field Mobile App</h3>
+      <p class="pc-desc">English and Arabic React Native app for vehicle inspections, warranty and manual entry.</p>
+      <div class="pc-foot"><span class="pc-tags">React Native &middot; TestFlight</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
+    </article>
+    <article class="pcard" data-group="enterprise" data-modal="ops" tabindex="0" role="button" data-cursor="View">
+      <div class="pc-top"><span class="pc-n">05</span></div>
+      <p class="pc-cat">Enterprise &middot; Internal tool</p>
+      <h3>Internal Operations Tool</h3>
+      <p class="pc-desc">Self-hosted Supabase and Next.js with Azure DevOps CI/CD and single sign-on.</p>
+      <div class="pc-foot"><span class="pc-tags">Supabase &middot; Next.js &middot; CI/CD</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
+    </article>
+    <article class="pcard" data-group="enterprise" data-modal="api" tabindex="0" role="button" data-cursor="View">
+      <div class="pc-top"><span class="pc-n">06</span></div>
+      <p class="pc-cat">Enterprise &middot; Integration</p>
+      <h3>Insurer Policy API Integration</h3>
+      <p class="pc-desc">OAuth2 integration with an insurance partner's policy APIs.</p>
+      <div class="pc-foot"><span class="pc-tags">OAuth2 &middot; REST &middot; Postman</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
+    </article>
+    <article class="pcard" data-group="enterprise" data-modal="itsm" tabindex="0" role="button" data-cursor="View">
+      <div class="pc-top"><span class="pc-n">07</span></div>
+      <p class="pc-cat">Enterprise &middot; ITSM</p>
+      <h3>Support Ticketing</h3>
+      <p class="pc-desc">Ticket-update and SLA email notifications for a support desk.</p>
+      <div class="pc-foot"><span class="pc-tags">ITSM &middot; SLA</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
+    </article>
+    <article class="pcard" data-group="self" data-modal="hr" tabindex="0" role="button" data-cursor="View">
+      <div class="pc-top"><span class="pc-n">08</span></div>
+      <p class="pc-cat">Self project &middot; ZaadWorks</p>
+      <h3>UAE HR &amp; Payroll SaaS</h3>
+      <p class="pc-desc">MOHRE and WPS-compliant payroll. Migrated production across Supabase projects: 79 tables, RLS and triggers.</p>
+      <div class="pc-foot"><span class="pc-tags">Supabase &middot; PostgreSQL</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
+    </article>
+    <article class="pcard" data-group="self" data-modal="agents" tabindex="0" role="button" data-cursor="View">
+      <div class="pc-top"><span class="pc-n">09</span></div>
+      <p class="pc-cat">Self project &middot; ZaadAgents</p>
+      <h3>Multi-LLM WhatsApp AI Agent</h3>
+      <p class="pc-desc">An AI agent that routes tasks across LLMs and serves customers over WhatsApp.</p>
+      <div class="pc-foot"><span class="pc-tags">LLMs &middot; WhatsApp API</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
+    </article>
+  </div>
+</section>
+
 <!-- ============ PRODUCTS ============ -->
 <section id="products" class="hscroll">
   <div class="hs-sticky">
   <div class="hs-inner">
   <div class="sec-head row">
     <span class="sec-prog" aria-hidden="true"><i></i></span>
-    <p class="kick"><span>01</span> Live &amp; open source</p>
+    <p class="kick"><span>04</span> Live &amp; open source</p>
     <h2 data-par="-0.04">Products &amp; builds</h2>
   </div>
   <div class="hs-hint" aria-hidden="true">Drag &middot; hover to pause</div>
@@ -183,77 +324,11 @@
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section id="about" class="section">
-  <div class="sec-head">
-    <p class="kick"><span>02</span> About</p>
-  </div>
-  <div class="about">
-    <div class="about-body">
-      <p class="about-big" data-words data-par="-0.05">I started as a .NET developer. Today I also own architecture, roadmaps and sprint delivery for the platforms I build.</p>
-      <p>Most of my 8+ years went into C# and ASP.NET Web API services, SQL Server and Oracle databases, and the React apps on top of them. My current role adds architecture decisions, MVP scoping and running sprints as scrum master. I also build my own SaaS projects. My day-to-day workflow is agentic: I plan, code, review and test with AI agents such as Claude and Codex, which lets small teams ship fast without cutting corners.</p>
-      <div class="pillars" data-par="0.04">
-        <div><span>01</span><h4>Architecture</h4><p>Data models, access control, SSO and secure authentication.</p></div>
-        <div><span>02</span><h4>Product</h4><p>Roadmaps, scoping, user stories and change requests.</p></div>
-        <div><span>03</span><h4>Leadership</h4><p>Leading projects, running scrum, and mentoring and training new interns.</p></div>
-        <div><span>04</span><h4>AI-first delivery</h4><p>Agentic AI workflows for fast, efficient project delivery.</p></div>
-      </div>
-      <p class="also"><b>Also:</b> a Supabase learning guide for interns, research on UAE payment gateways (Stripe fees, FX strategy), Azure AD / MSAL troubleshooting and API specs.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ EXPERIENCE ============ -->
-<section id="experience" class="section split">
-  <div class="sec-head row">
-    <span class="sec-prog" aria-hidden="true"><i></i></span>
-    <p class="kick"><span>03</span> Since 2018</p>
-    <h2 data-par="-0.04">Experience</h2>
-  </div>
-  <div class="xp-wrap"><span class="xp-rail" aria-hidden="true"><i></i></span>
-  <ol class="xp">
-    <li class="now">
-      <span class="xp-when">Oct 2024 &mdash; Now</span>
-      <div class="xp-what"><h3>Full Stack Developer</h3><p>Lead full stack development on enterprise insurance platforms (React, ASP.NET/.NET, SQL Server, Oracle). I lead projects end to end, own architecture and roadmaps, run sprints as scrum master, and mentor and train new interns.</p></div>
-      <span class="xp-where">Dev Dynamics &middot; Dubai</span>
-    </li>
-    <li>
-      <span class="xp-when">Nov 2022 &mdash; Oct 2024</span>
-      <div class="xp-what"><h3>.NET API Developer</h3><p>Built and maintained .NET REST APIs and React front ends for business applications in an agile team.</p></div>
-      <span class="xp-where">Dev Dynamics &middot; Dubai</span>
-    </li>
-    <li>
-      <span class="xp-when">Jun 2021 &mdash; Sep 2022</span>
-      <div class="xp-what"><h3>Programmer Analyst</h3><p>Built .NET APIs and web applications on SQL Server, plus web design work.</p></div>
-      <span class="xp-where">Cognizant &middot; Kochi</span>
-    </li>
-    <li>
-      <span class="xp-when">Jun 2020 &mdash; Jun 2021</span>
-      <div class="xp-what"><h3>Software Developer</h3><p>Built web apps with .NET Core, ASP.NET Web API, HTML and React.js.</p></div>
-      <span class="xp-where">Intertoons &middot; Kochi</span>
-    </li>
-    <li>
-      <span class="xp-when">Apr 2019 &mdash; Jun 2020</span>
-      <div class="xp-what"><h3>Software Developer</h3><p>Built .NET APIs, WCF services and React.js interfaces.</p></div>
-      <span class="xp-where">Techxora &middot; Thrissur</span>
-    </li>
-    <li>
-      <span class="xp-when">Nov 2018 &mdash; Apr 2019</span>
-      <div class="xp-what"><h3>Software Designer</h3><p>Interface and web design.</p></div>
-      <span class="xp-where">Intellect Technomedia</span>
-    </li>
-  </ol></div>
-  <div class="edu">
-    <div><small>Education</small><b>B.Tech, Computer Science</b><span>Royal College of Engineering &amp; Technology &middot; 2014 &ndash; 2018</span></div>
-    <div><small>Education</small><b>MBA, Operations Management</b><span>Capital University &middot; 2020 &ndash; 2021</span></div>
-  </div>
-</section>
-
 <!-- ============ SKILLS ============ -->
 <section id="skills" class="section split">
   <div class="sec-head row">
     <span class="sec-prog" aria-hidden="true"><i></i></span>
-    <p class="kick"><span>04</span> Skills</p>
+    <p class="kick"><span>05</span> Skills</p>
     <h2 data-par="-0.04">Stack &amp; tools</h2>
   </div>
   <div class="skills">
@@ -350,81 +425,15 @@
 </section>
 </main>
 
-<!-- ============ PROJECTS ============ -->
-<section id="work" class="section">
+<!-- ============ EDUCATION ============ -->
+<section id="education" class="section tight">
   <div class="sec-head row">
-    <p class="kick"><span>05</span> Handled projects</p>
-    <h2 data-par="-0.04">Projects</h2>
+    <p class="kick"><span>06</span> Degrees</p>
+    <h2 data-par="-0.04">Education</h2>
   </div>
-  <div class="pfilter" role="tablist" aria-label="Filter projects">
-    <button class="pf on" data-filter="all" role="tab" aria-selected="true">All <i>9</i></button>
-    <button class="pf" data-filter="enterprise" role="tab" aria-selected="false">Enterprise <i>7</i></button>
-    <button class="pf" data-filter="self" role="tab" aria-selected="false">Self projects <i>2</i></button>
-  </div>
-  <div class="pgrid">
-    <article class="pcard" data-group="enterprise" data-modal="bi" tabindex="0" role="button" data-cursor="View">
-      <div class="pc-top"><span class="pc-n">01</span><span class="pc-badge">Case study</span></div>
-      <p class="pc-cat">Enterprise &middot; Business Intelligence</p>
-      <h3>Executive BI &amp; AI Insights Platform</h3>
-      <p class="pc-desc">Leadership dashboards for loss ratios, P&amp;L forecasting and scorecards, powered by in-house AI.</p>
-      <div class="pc-foot"><span class="pc-tags">Azure AD &middot; Self-hosted LLM &middot; Scrum</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
-    </article>
-    <article class="pcard" data-group="enterprise" data-modal="dms" tabindex="0" role="button" data-cursor="View">
-      <div class="pc-top"><span class="pc-n">02</span><span class="pc-badge">Case study</span></div>
-      <p class="pc-cat">Enterprise &middot; Document Management</p>
-      <h3>Technical Document Repository</h3>
-      <p class="pc-desc">Dynamic vaults, Drive-style sharing and approval workflows for treaties, wordings and rate sheets.</p>
-      <div class="pc-foot"><span class="pc-tags">Next.js &middot; Supabase &middot; Drizzle</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
-    </article>
-    <article class="pcard" data-group="enterprise" data-modal="crm" tabindex="0" role="button" data-cursor="View">
-      <div class="pc-top"><span class="pc-n">03</span><span class="pc-badge">Case study</span></div>
-      <p class="pc-cat">Enterprise &middot; CRM</p>
-      <h3>CRM Access Control &amp; Leads</h3>
-      <p class="pc-desc">Azure AD-synced role-based access, a leads workspace for agents and a 12-widget KPI dashboard.</p>
-      <div class="pc-foot"><span class="pc-tags">ASP.NET &middot; React &middot; RBAC</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
-    </article>
-    <article class="pcard" data-group="enterprise" data-modal="mob" tabindex="0" role="button" data-cursor="View">
-      <div class="pc-top"><span class="pc-n">04</span></div>
-      <p class="pc-cat">Enterprise &middot; Mobile</p>
-      <h3>Insurance Field Mobile App</h3>
-      <p class="pc-desc">English and Arabic React Native app for vehicle inspections, warranty and manual entry.</p>
-      <div class="pc-foot"><span class="pc-tags">React Native &middot; TestFlight</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
-    </article>
-    <article class="pcard" data-group="enterprise" data-modal="ops" tabindex="0" role="button" data-cursor="View">
-      <div class="pc-top"><span class="pc-n">05</span></div>
-      <p class="pc-cat">Enterprise &middot; Internal tool</p>
-      <h3>Internal Operations Tool</h3>
-      <p class="pc-desc">Self-hosted Supabase and Next.js with Azure DevOps CI/CD and single sign-on.</p>
-      <div class="pc-foot"><span class="pc-tags">Supabase &middot; Next.js &middot; CI/CD</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
-    </article>
-    <article class="pcard" data-group="enterprise" data-modal="api" tabindex="0" role="button" data-cursor="View">
-      <div class="pc-top"><span class="pc-n">06</span></div>
-      <p class="pc-cat">Enterprise &middot; Integration</p>
-      <h3>Insurer Policy API Integration</h3>
-      <p class="pc-desc">OAuth2 integration with an insurance partner's policy APIs.</p>
-      <div class="pc-foot"><span class="pc-tags">OAuth2 &middot; REST &middot; Postman</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
-    </article>
-    <article class="pcard" data-group="enterprise" data-modal="itsm" tabindex="0" role="button" data-cursor="View">
-      <div class="pc-top"><span class="pc-n">07</span></div>
-      <p class="pc-cat">Enterprise &middot; ITSM</p>
-      <h3>Support Ticketing</h3>
-      <p class="pc-desc">Ticket-update and SLA email notifications for a support desk.</p>
-      <div class="pc-foot"><span class="pc-tags">ITSM &middot; SLA</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
-    </article>
-    <article class="pcard" data-group="self" data-modal="hr" tabindex="0" role="button" data-cursor="View">
-      <div class="pc-top"><span class="pc-n">08</span></div>
-      <p class="pc-cat">Self project &middot; ZaadWorks</p>
-      <h3>UAE HR &amp; Payroll SaaS</h3>
-      <p class="pc-desc">MOHRE and WPS-compliant payroll. Migrated production across Supabase projects: 79 tables, RLS and triggers.</p>
-      <div class="pc-foot"><span class="pc-tags">Supabase &middot; PostgreSQL</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
-    </article>
-    <article class="pcard" data-group="self" data-modal="agents" tabindex="0" role="button" data-cursor="View">
-      <div class="pc-top"><span class="pc-n">09</span></div>
-      <p class="pc-cat">Self project &middot; ZaadAgents</p>
-      <h3>Multi-LLM WhatsApp AI Agent</h3>
-      <p class="pc-desc">An AI agent that routes tasks across LLMs and serves customers over WhatsApp.</p>
-      <div class="pc-foot"><span class="pc-tags">LLMs &middot; WhatsApp API</span><span class="pc-go" aria-hidden="true">&rarr;</span></div>
-    </article>
+  <div class="edu">
+    <div><b>B.Tech, Computer Science</b><span>Royal College of Engineering &amp; Technology &middot; 2014 &ndash; 2018</span></div>
+    <div><b>MBA, Operations Management</b><span>Capital University &middot; 2020 &ndash; 2021</span></div>
   </div>
 </section>
 
@@ -435,7 +444,7 @@
 
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="contact">
-  <p class="kick"><span>06</span> Contact</p>
+  <p class="kick"><span>07</span> Contact</p>
   <h2 class="contact-title">Get in<br><em>touch.</em></h2>
   <p class="sub">Open to backend, full stack and tech lead roles in the UAE, and remote roles worldwide.</p>
   <div class="mail-wrap">
